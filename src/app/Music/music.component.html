@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <div class="panel-header">
+    
+    <h4>Music Details</h4>
+    </div>
+    <div class="panel-body">
+    <div class="table-responsive">
+        <table class="table">
+        <thead>
+         <tr>
+            <th>Artists</th>
+        </tr>
+        </thead>
+        <tbody>
+    
+        <tr *ngFor="let music of musicList.artists">
+            <td>
+              {{music.name}}
+             
+              
+            </td>
+        </tr>
+        </tbody>
+
+        </table>
+
+
+    </div>
+    
+    </div>
+    
+    </div>

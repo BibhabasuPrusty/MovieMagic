@@ -1,0 +1,53 @@
+<div class="row">
+
+    <div class="col-md-6">
+  
+   <table>
+            <thead>
+            <th>
+             <h1>Movies</h1>  
+            </th>
+            </thead>
+  <tbody>
+      <tr *ngFor="let mov of movies" (click)="DisplaySideView(mov.name,mov.imageUrl,mov.language,mov.type)">
+                <td>{{mov.name}}</td>
+                <!-- <td><img [src]="mov.imageUrl" class="img-responsive"/></td> -->
+                <td>{{mov.type}}</td>
+ </tr>
+
+  </tbody>
+
+   </table>
+    </div>
+
+ <div class="col-md-6" *ngIf="ShowSideView">
+<table>
+        <thead>
+                <th>
+                    <h1> Details</h1> 
+                </th>
+         </thead>
+   <tbody>
+<tr>
+
+<td>
+        <h4> Movie Name: {{movieName}}</h4> 
+        <h4> Language :{{mlanguage}} </h4> 
+        <h4> Type :  {{mtype}} </h4> 
+</td>
+</tr>
+
+<tr>
+<td><td><img src={{imagePath}} class="img-responsive" /></td>
+
+</tr>
+
+
+  </tbody>
+
+</table>
+
+
+ </div>
+
+</div>
