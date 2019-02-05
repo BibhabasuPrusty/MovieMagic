@@ -1,32 +1,26 @@
 <div class="panel panel-default">
     <div class="panel-header">
     
-    <h4>Music Details</h4>
+    <h4 [ngStyle]="{'text-align': 'Center','color':'red','font-family': 'Franklin Gothic Medium','font-size': 'xx-large'}">Artists</h4>
     </div>
-    <div class="panel-body">
-    <div class="table-responsive">
-        <table class="table">
-        <thead>
-         <tr>
-            <th>Artists</th>
-        </tr>
-        </thead>
-        <tbody>
-    
-        <tr *ngFor="let music of musicList.artists">
-            <td>
-              {{music.name}}
-             
-              
-            </td>
-        </tr>
-        </tbody>
-
-        </table>
-
-
-    </div>
-    
+    <div class="row">
+        <div class="card " style="width:400px;margin-left:10%;margin-top:4%"  *ngFor="let music of musicList.artists">
+                <!-- <img class="card-img-top img-fluid" src="../assets/covers/{{music.cover}}.jpg" alt="Card image"> -->
+                <div class="card-body">
+                <h4 class="card-title">{{music.name}}</h4>
+                <p class="card-text">{{music.bio}}</p>
+                <a href="#demo{{music.id}}" [ngStyle]="{'color':'red','font-family': 'Franklin Gothic Medium','font-size': 'large'}"  data-toggle="collapse">See Albums</a>
+                <div id="demo{{music.id}}" class="collapse">
+                    <div class="row">
+                        <div class="card col-sm-6" style="width:200px;"  *ngFor="let album of music.albums">
+                            <!-- <img class="card-img-top" src="../assets/albums/{{album.cover}}.jpg" alt="Card image"> -->
+                            <div class="card-body">
+                                <h4 class="card-title">{{album.title}}</h4>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+        </div>
     </div>
     
     </div>

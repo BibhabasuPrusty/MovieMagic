@@ -10,7 +10,7 @@ import { IMusic } from './music.model';
 
 export class MusicService
 {
-  private _musicUrl='http://ngmusicdb.herokuapp.com/api/getMusic';
+  private _musicUrl='https://ngmusicdb.herokuapp.com/api/getMusic';
   constructor(private _http:HttpClient)
   {
 

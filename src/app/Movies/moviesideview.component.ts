@@ -32,7 +32,7 @@ export class MovieSideComponent implements OnInit
       this.imagePath=imageUrl;
       this.mlanguage=language;
       this.mtype=type;      
-     this.ShowSideView=!this.ShowSideView;
+     this.ShowSideView=true;
    }
 
 }

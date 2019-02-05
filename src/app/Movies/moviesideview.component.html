@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-md-6">
+     <div class="col-md-6">
   
    <table>
             <thead>
@@ -10,17 +10,22 @@
             </thead>
   <tbody>
       <tr *ngFor="let mov of movies" (click)="DisplaySideView(mov.name,mov.imageUrl,mov.language,mov.type)">
-                <td>{{mov.name}}</td>
-                <!-- <td><img [src]="mov.imageUrl" class="img-responsive"/></td> -->
-                <td>{{mov.type}}</td>
+                <td>
+                  <h4>{{mov.name}}</h4>
+                   <p>{{mov.type}}</p>
+                
+                </td>
+                 
+                <td></td>
  </tr>
 
   </tbody>
 
    </table>
     </div>
+ 
 
- <div class="col-md-6" *ngIf="ShowSideView">
+<div  class="col-md-4" *ngIf="ShowSideView">
 <table>
         <thead>
                 <th>
@@ -31,14 +36,14 @@
 <tr>
 
 <td>
-        <h4> Movie Name: {{movieName}}</h4> 
-        <h4> Language :{{mlanguage}} </h4> 
-        <h4> Type :  {{mtype}} </h4> 
+        <h4> Movie Name:</h4><p>{{movieName}}</p> 
+        <h4> Language:</h4><p>{{mlanguage}} </p> 
+        <h4> Type :</h4><p> {{mtype}} </p> 
 </td>
 </tr>
 
 <tr>
-<td><td><img src={{imagePath}} class="img-responsive" /></td>
+<td><td> <img src={{imagePath}} style="width:200px" class="img-responsive" /></td>
 
 </tr>
 
@@ -48,6 +53,6 @@
 </table>
 
 
- </div>
+ </div> 
 
 </div>
